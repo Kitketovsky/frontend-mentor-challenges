@@ -1,4 +1,3 @@
-import "./css/main.css";
 import mobileImg from "./assets/image-product-mobile.jpg";
 import desktopImg from "./assets/image-product-desktop.jpg";
 

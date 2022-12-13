@@ -1,34 +1,27 @@
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const HTMLWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
-  mode: "development",
-  entry: path.resolve(__dirname, "src/index.js"),
+  mode: "production",
+  entry: ["./src/css/main.css", "./src/index.js", "./src/index.html"],
   output: {
+    publicPath: "/",
     path: path.resolve(__dirname, "build"),
-    filename: "[name].[contenthash].js",
-    clean: false,
+    filename: "main.js",
     assetModuleFilename: "assets/[name][ext]",
+    clean: true,
   },
   devtool: "source-map",
   devServer: {
-    watchFiles: [path.resolve(__dirname, "src/*.html")],
-    static: {
-      directory: path.resolve(__dirname, "build"),
-    },
     port: 3000,
-    open: true,
     hot: true,
-    compress: true,
+    open: true,
     historyApiFallback: true,
   },
   module: {
     rules: [
-      {
-        test: /\.css$/,
-        use: [{ loader: MiniCssExtractPlugin.loader }, "css-loader"],
-      },
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -37,24 +30,23 @@ module.exports = {
           options: { presets: ["@babel/preset-env"] },
         },
       },
-      {
-        test: /\.html$/i,
-        loader: "html-loader",
-      },
-      {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: "asset/resource",
-      },
+      { test: /\.css$/, use: [MiniCssExtractPlugin.loader, "css-loader"] },
+      { test: /\.(png|svg|jpeg|gif|jpg)$/, type: "asset/resource" },
+      { test: /\.html$/, use: ["html-loader"] },
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      title: "Webpack App",
+    new HTMLWebpackPlugin({
       filename: "index.html",
-      template: "src/index.html",
+      template: "./src/index.html",
+      favicon: "./src/assets/favicon-32x32.png",
     }),
     new MiniCssExtractPlugin({
-      filename: "[name].css",
+      filename: "./css/[name].css",
     }),
   ],
+  optimization: {
+    minimize: true,
+    minimizer: [new CssMinimizerPlugin()],
+  },
 };
