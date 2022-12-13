@@ -1,0 +1,30 @@
+:root {
+    --button-idle: #666CA3;
+    --button-hover: #13183F;
+    --gray: #83869A;
+    --redpink: #F74780;
+    --light-pink: #FFA7C3;
+    --white: #FFFFF;
+    --btn-one-gradient-one: #F02AA6;
+    --btn-one-gradient-two: #FF6F48;
+    --btn-two-gradient-one: #4851FF;
+    --btn-two-gradient-two: #F02AA6;
+
+    --heading-xl: 56;
+    --heading-l: 40;
+    --heading-m: 32;
+    --heading-s: 24;
+
+    --body-m: 18;
+    --body-s: 16;
+}
+
+html {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
