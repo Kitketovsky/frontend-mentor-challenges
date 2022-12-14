@@ -7,7 +7,6 @@ module.exports = {
   mode: "production",
   entry: ["./src/css/main.css", "./src/index.html"],
   output: {
-    // publicPath: "/",
     path: path.resolve(__dirname, "build"),
     filename: "main.js",
     assetModuleFilename: "images/[name][ext]",
@@ -30,16 +29,21 @@ module.exports = {
           options: { presets: ["@babel/preset-env"] },
         },
       },
-      { test: /\.css$/, use: [MiniCssExtractPlugin.loader, "css-loader"] },
+      {
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
+      },
       { test: /\.(png|svg|jpeg|gif|jpg)$/, type: "asset/resource" },
-      { test: /\.html$/, use: ["html-loader"] },
+      {
+        test: /\.html$/,
+        loader: "html-loader",
+      },
     ],
   },
   plugins: [
     new HTMLWebpackPlugin({
       filename: "index.html",
       template: "./src/index.html",
-      favicon: "./src/assets/favicon-32x32.png",
     }),
     new MiniCssExtractPlugin({
       filename: "./css/[name].css",
@@ -48,5 +52,8 @@ module.exports = {
   optimization: {
     minimize: true,
     minimizer: [new CssMinimizerPlugin()],
+  },
+  performance: {
+    maxAssetSize: 2500000
   },
 };
