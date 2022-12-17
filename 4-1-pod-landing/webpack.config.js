@@ -5,16 +5,15 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
   mode: "production",
-  entry: ["./src/css/main.css", "./src/index.js"],
+  entry: ["./src/css/main.css", "./src/index.js", "./src/index.html"],
   output: {
     path: path.resolve(__dirname, "public"),
     filename: "main.js",
-    assetModuleFilename: "assets/[name][ext]",
+    assetModuleFilename: "assets/[name][hash][ext]",
     clean: true,
   },
   devtool: "source-map",
   devServer: {
-    watchFiles: ["./src/index.html"],
     port: 3000,
     hot: true,
     open: true,
