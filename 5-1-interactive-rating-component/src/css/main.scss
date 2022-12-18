@@ -57,7 +57,7 @@ body {
     @extend %centered;
 }
 
-.card {
+#card {
     background: radial-gradient(98.96% 98.96% at 50% 0%, $dark-blue 0%, $very-dark-blue 100%);
     border-radius: 30px;
     max-width: 412px;
@@ -66,6 +66,10 @@ body {
 
     @media screen and (max-width: $mobile-breakpoint) {
         padding: 24px;
+    }
+
+    &.thank-you {
+        text-align: center;
     }
 }
 
@@ -134,6 +138,16 @@ p {
         color: $orange;
         background-color: $white;
     }
+}
+
+.selected {
+    @extend %centered;
+    width: fit-content;
+    padding: 5px 12px;
+    background: $dark-blue;
+    margin: 24px auto;
+    color: $orange;
+    border-radius: 22.5px;
 }
 
 
