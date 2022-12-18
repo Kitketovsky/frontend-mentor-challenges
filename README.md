@@ -9,3 +9,5 @@ Skilled E-Learning Page [Repo](https://github.com/Kitketovsky/frontend-mentor-ch
 FAQ Accordion Card [Repo](https://github.com/Kitketovsky/frontend-mentor-challenges/tree/main/3-1-faq-accordion) / [Live](https://faq-accordion-page-chi.vercel.app/)
 
 Pod Access Request Page [Repo](https://github.com/Kitketovsky/frontend-mentor-challenges/tree/main/4-1-pod-landing) / [Live](https://cheery-longma-0c2e91.netlify.app/)
+
+Interactive rating component [Repo](https://github.com/Kitketovsky/frontend-mentor-challenges/tree/main/5-1-interactive-rating-component) / [Live](https://strong-kashata-6bc965.netlify.app/)
