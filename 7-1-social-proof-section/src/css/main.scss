@@ -48,6 +48,15 @@ body {
   justify-content: center;
   padding: 8% 10% calc(8% + 16px);
 
+  background: url("./../assets/bg-pattern-top-desktop.svg") no-repeat left top,
+    url("./../assets/bg-pattern-bottom-desktop.svg") no-repeat right bottom;
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    background: url("./../assets/bg-pattern-top-mobile.svg") no-repeat left top,
+      url("./../assets/bg-pattern-bottom-mobile.svg") no-repeat right bottom;
+    background-size: auto auto, 100% 35%;
+  }
+
   @media screen and (max-width: $tablet-breakpoint) {
     padding: 82px 24px 105px;
   }
