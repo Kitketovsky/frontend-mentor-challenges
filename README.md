@@ -10,4 +10,6 @@ FAQ Accordion Card [Repo](https://github.com/Kitketovsky/frontend-mentor-challen
 
 Pod Access Request Page [Repo](https://github.com/Kitketovsky/frontend-mentor-challenges/tree/main/4-1-pod-landing) / [Live](https://cheery-longma-0c2e91.netlify.app/)
 
-Interactive rating component [Repo](https://github.com/Kitketovsky/frontend-mentor-challenges/tree/main/5-1-interactive-rating-component) / [Live](https://strong-kashata-6bc965.netlify.app/)
+Interactive Rating Component [Repo](https://github.com/Kitketovsky/frontend-mentor-challenges/tree/main/5-1-interactive-rating-component) / [Live](https://strong-kashata-6bc965.netlify.app/)
+
+Interactive QR Code Component [Repo](https://github.com/Kitketovsky/frontend-mentor-challenges/tree/main/6-1-qr-code-component) / [Live](https://adorable-scone-2c0890.netlify.app/)
