@@ -1,153 +1,165 @@
-@use 'colors' as *;
-@import 'normalize.css';
+@use "colors" as *;
+@import "normalize.css";
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 // Font
-$font: 'Overpass', sans-serif;
+$font: "Overpass", sans-serif;
 $font-size: 15px;
 
 // Media
 $mobile-breakpoint: 450px;
 
 %centered {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 %circle {
-    max-height: 48px;
-    height: 100%;
-    max-width: 48px;
-    aspect-ratio: 1 / 1;
-    border-radius: 50%;
-    background-color: $dark-blue;
+  max-height: 48px;
+  height: 100%;
+  max-width: 48px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background-color: $dark-blue;
 }
 
 %transition {
-    transition-property: background-color, color;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-in-out;
-    cursor: pointer;
-};
+  transition-property: background-color, color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  cursor: pointer;
+}
 
 html {
-    font-family: $font;
-    font-size: $font-size;
-    color: $white;
+  font-family: $font;
+  font-size: $font-size;
+  color: $white;
 }
 
 button {
-    appearance: none;
-    border: none;
-    background: transparent;
-    color: inherit;
-    cursor: pointer;
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
 }
 
 body {
-    background: $very-dark-blue;
-    min-height: 100vh;
-    padding: 154px 24px;
-    @extend %centered;
+  background: $very-dark-blue;
+  min-height: 100vh;
+  padding: 154px 24px;
+  @extend %centered;
 }
 
 #card {
-    background: radial-gradient(98.96% 98.96% at 50% 0%, $dark-blue 0%, $very-dark-blue 100%);
-    border-radius: 30px;
-    max-width: 412px;
-    height: 416px;
-    padding: 32px 39px 32px 32px;
+  background: radial-gradient(
+    98.96% 98.96% at 50% 0%,
+    $card-bg-gradient-one 0%,
+    $card-bg-gradient-two 100%
+  );
+  border-radius: 30px;
+  max-width: 412px;
+  height: 416px;
+  padding: 32px 39px 32px 32px;
 
-    @media screen and (max-width: $mobile-breakpoint) {
-        padding: 24px;
-    }
+  h1 {
+    margin: 30px 0 15px;
+    font-size: 28px;
+  }
 
-    &.thank-you {
-        text-align: center;
-    }
-}
-
-p {
+  p {
     line-height: 24px;
     color: $light-grey;
 
     @media screen and (max-width: $mobile-breakpoint) {
-        line-height: 22px;
+      line-height: 22px;
     }
+  }
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding: 24px;
+  }
+
+  &.thank-you {
+    text-align: center;
+  }
 }
 
 .star {
-    @extend %circle;
-    @extend %centered;
+  @extend %circle;
+  @extend %centered;
 }
 
 .scores {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 24px 0 32px 0;
-    column-gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 24px 0 32px 0;
+  column-gap: 1rem;
 
-    @media screen and (max-width: $mobile-breakpoint) {
-        margin: 24px 0;
-    }
+  @media screen and (max-width: $mobile-breakpoint) {
+    margin: 24px 0;
+  }
 }
 
 .score {
-    @extend %circle;
-    overflow: hidden;
+  @extend %circle;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+
+  input[type="radio"] {
+    display: none;
+
+    &:checked + label {
+      color: $white;
+      background-color: $light-grey;
+    }
+  }
+
+  label {
     width: 100%;
     height: 100%;
+    @extend %centered, %transition;
+    line-height: 0;
+    color: $medium-grey;
+    font-weight: 700;
 
-    input[type='radio'] {
-        display: none;
-
-        &:checked + label {
-            background-color: $light-grey;
-        }
+    &:hover {
+      background-color: $orange;
+      color: $white;
     }
-
-    label {
-        width: 100%;
-        height: 100%;
-        @extend %centered, %transition;
-        line-height: 0;
-
-        &:hover {
-            background-color: $orange;
-        }
-    }
+  }
 }
 
 #submit {
-    background-color: $orange;
-    border-radius: 22.5px;
-    height: 45px;
-    width: 100%;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    @extend %transition;
+  background-color: $orange;
+  border-radius: 22.5px;
+  height: 45px;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  @extend %transition;
 
-    &:hover {
-        color: $orange;
-        background-color: $white;
-    }
+  &:hover {
+    color: $orange;
+    background-color: $white;
+  }
 }
 
 .selected {
-    @extend %centered;
-    width: fit-content;
-    padding: 5px 12px;
-    background: $dark-blue;
-    margin: 24px auto;
-    color: $orange;
-    border-radius: 22.5px;
+  @extend %centered;
+  width: fit-content;
+  padding: 5px 12px;
+  background: $dark-blue;
+  margin: 24px auto;
+  color: $orange;
+  border-radius: 22.5px;
 }
-
-
