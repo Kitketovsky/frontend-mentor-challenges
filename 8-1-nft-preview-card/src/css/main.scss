@@ -1,0 +1,118 @@
+@use "colors" as *;
+@import "normalize.css";
+
+$font-base: 18px;
+
+html {
+  font: {
+    family: "Outfit", sans-serif;
+    size: 18px;
+    weight: 300;
+  }
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $very-dark-blue-main;
+  color: $soft-blue;
+}
+
+.nft {
+  $border-radius: 16px;
+  width: 302px;
+  padding: 24px;
+  background-color: $very-dark-blue-card;
+  border-radius: $border-radius;
+  margin: 62px 24px;
+
+  &__image img {
+    border-radius: calc($border-radius / 2);
+    max-width: 100%;
+  }
+
+  &__title {
+    color: $white;
+    font: {
+      size: 1.2em;
+      weight: 600;
+    }
+  }
+
+  &__description {
+    line-height: 1.45em;
+    margin: 0.9em 0 1.333em 0;
+  }
+
+  &__data {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__price {
+      $icon-margin: 18px;
+      color: $cyan;
+      font-size: 0.9em;
+      position: relative;
+      margin-left: $icon-margin;
+
+      &::before {
+        content: url("./../assets/icon-ethereum.svg");
+        position: absolute;
+        transform: translateX(-$icon-margin);
+      }
+    }
+
+    &__days-left {
+      position: relative;
+
+      &::before {
+        content: url("./../assets/icon-clock.svg");
+        position: absolute;
+        transform: translate(-22px, 2px);
+      }
+    }
+  }
+
+  hr {
+    margin: 1.45em 0 0.9em 0;
+    border-width: 0;
+    height: 1px;
+    background-color: $very-dark-blue-line;
+  }
+
+  &__creator {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 1em;
+
+    img {
+      max-width: 100%;
+      $side: 33px;
+      width: $side;
+      height: $side;
+      border: 1px solid $white;
+      border-radius: 50%;
+    }
+
+    span {
+      font-size: 0.9em;
+    }
+  }
+}
+
+.hover {
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    color: $cyan;
+  }
+}
+
+.deco__text-white {
+  color: $white;
+}
