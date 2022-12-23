@@ -16,4 +16,4 @@ Social Proof Section [Repo](https://github.com/Kitketovsky/frontend-mentor-chall
 
 NFT Preview Card [Repo](https://github.com/Kitketovsky/frontend-mentor-challenges/tree/main/8-1-nft-preview-card) / [Live](https://friendly-bavarois-90151d.netlify.app/)
 
-Equalizer landing page [Repo](https://github.com/Kitketovsky/frontend-mentor-challenges/tree/main/9-1-equalizer-landing-page) / [Live](https://gorgeous-granita-dd1fd1.netlify.app/)
+Equalizer Landing Page [Repo](https://github.com/Kitketovsky/frontend-mentor-challenges/tree/main/9-1-equalizer-landing-page) / [Live](https://gorgeous-granita-dd1fd1.netlify.app/)
