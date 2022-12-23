@@ -15,3 +15,5 @@ Interactive Rating Component [Repo](https://github.com/Kitketovsky/frontend-ment
 Interactive QR Code Component [Repo](https://github.com/Kitketovsky/frontend-mentor-challenges/tree/main/6-1-qr-code-component) / [Live](https://adorable-scone-2c0890.netlify.app/)
 
 Social Proof Section [Repo](https://github.com/Kitketovsky/frontend-mentor-challenges/tree/main/7-1-social-proof-section) / [Live](https://frolicking-gingersnap-896514.netlify.app/)
+
+NFT Preview Card [Repo](https://github.com/Kitketovsky/frontend-mentor-challenges/tree/main/8-1-nft-preview-card) / [Live](https://friendly-bavarois-90151d.netlify.app/)
