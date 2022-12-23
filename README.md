@@ -15,3 +15,5 @@ Interactive QR Code Component [Repo](https://github.com/Kitketovsky/frontend-men
 Social Proof Section [Repo](https://github.com/Kitketovsky/frontend-mentor-challenges/tree/main/7-1-social-proof-section) / [Live](https://frolicking-gingersnap-896514.netlify.app/)
 
 NFT Preview Card [Repo](https://github.com/Kitketovsky/frontend-mentor-challenges/tree/main/8-1-nft-preview-card) / [Live](https://friendly-bavarois-90151d.netlify.app/)
+
+Equalizer landing page [Repo](https://github.com/Kitketovsky/frontend-mentor-challenges/tree/main/9-1-equalizer-landing-page) / [Live](https://gorgeous-granita-dd1fd1.netlify.app/)
